@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list.h                                          :+:      :+:    :+:   */
+/*   ft_list_reverse_fun.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/05 08:44:18 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/07 11:54:57 by nhuber           ###   ########.fr       */
+/*   Created: 2015/12/10 07:11:33 by nhuber            #+#    #+#             */
+/*   Updated: 2015/12/10 07:16:18 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIST_H
-# define FT_LIST_H
-# include <stdlib.h>
+#include "ft_list.h"
 
-typedef struct	s_list
+void	ft_list_reverse_fun(t_list *begin_list)
 {
-	struct s_list	*next;
-	void			*data;
-}				t_list;
+	t_list	*new_root;
+	t_list	*root;
+	t_list	*next_root;
 
-#endif
+	root = begin_list;
+	new_root = NULL;
+	while (root)
+	{
+		new_root = root->next;
+		root->next = new_root;
+		new_root = root;
+		root = new_root;
+	}
+}

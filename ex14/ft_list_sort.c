@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list.h                                          :+:      :+:    :+:   */
+/*   ft_list_sort.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/05 08:44:18 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/07 11:54:57 by nhuber           ###   ########.fr       */
+/*   Created: 2015/12/10 06:22:55 by nhuber            #+#    #+#             */
+/*   Updated: 2015/12/10 07:09:10 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIST_H
-# define FT_LIST_H
-# include <stdlib.h>
+#include "ft_list.h"
 
-typedef struct	s_list
+void	ft_list_sort(t_list **begin_list, int (*cmp)())
 {
-	struct s_list	*next;
-	void			*data;
-}				t_list;
+	t_list	*elem;
+	t_list	*tmp;
+	t_list	*prev_elem;
 
-#endif
+	elem = *begin_list;
+	if (elem == NULL)
+		return (NULL);
+	while (elem->next != NULL)
+	{
+		if (cmp(elem->data, elem->next->data) > 0)
+		{
+			tmp = elem;
+			elem = elem->next;
+			tmp->next = elem;
+			elem = begin_list;
+		}
+		else
+			elem = elem->next;
+	}
+}

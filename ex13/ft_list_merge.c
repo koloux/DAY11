@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list.h                                          :+:      :+:    :+:   */
+/*   ft_list_merge.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/05 08:44:18 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/07 11:54:57 by nhuber           ###   ########.fr       */
+/*   Created: 2015/12/10 06:18:46 by nhuber            #+#    #+#             */
+/*   Updated: 2015/12/10 06:22:04 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIST_H
-# define FT_LIST_H
-# include <stdlib.h>
+#include "ft_list.h"
 
-typedef struct	s_list
+void	ft_list_merge(t_list **begin_list1, t_list *begin_list2)
 {
-	struct s_list	*next;
-	void			*data;
-}				t_list;
+	t_list *elem;
 
-#endif
+	elem = *begin_list1;
+	while (elem->next != NULL)
+		elem = elem->next;
+	elem->next = begin_list2;
+}
