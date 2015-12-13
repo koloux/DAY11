@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/10 07:16:52 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/10 07:51:51 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/13 12:35:35 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_sorted_list_insert(t_list **begin_list, void *data, int (*cmp)())
 		new_elem = ft_create_elem(data);
 		new_elem->next = elem->next->next;
 		elem->next = new_elem;
-		return ;
+		return (NULL);
 	}
 	while (elem->next != NULL)
 	{
@@ -32,7 +32,7 @@ void	ft_sorted_list_insert(t_list **begin_list, void *data, int (*cmp)())
 			new_elem = ft_create_elem(data);
 			new_elem->next = elem->next->next;
 			elem->next = new_elem;
-			return ;
+			return (NULL);
 		}
 		elem = elem->next;
 	}

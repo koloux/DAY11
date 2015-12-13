@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/09 18:23:19 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/10 05:58:42 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/13 12:34:23 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ t_list	*ft_list_find(t_list *begin_list, void *data_ref, int (*cmp)())
 		if (cmp(data_ref, elem_ref->data))
 			return (elem_ref);
 		elem_ref = elem_ref->next;
-	}	
+	}
 	return (begin_list);
 }
