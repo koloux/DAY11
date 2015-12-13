@@ -1,41 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_sort.c                                     :+:      :+:    :+:   */
+/*   ft_sorted_list_merge.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/10 06:22:55 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/13 10:52:50 by nhuber           ###   ########.fr       */
+/*   Created: 2015/12/13 11:37:11 by nhuber            #+#    #+#             */
+/*   Updated: 2015/12/13 12:19:43 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
 
-void	ft_list_sort(t_list **begin_list, int (*cmp)())
+int	ft_inc_dec(t_list *begin_list)
 {
-	t_list	*elem;
-	t_list	*tmp;
-	t_list	*prev_elem;
+	int sens;
 
-	elem = *begin_list;
-	if (elem == NULL)
-		return (NULL);
-	while (elem->next != NULL)
+	while (begin_list->next != NULL)
 	{
-		if (cmp(elem->data, elem->next->data) > 0)
-		{
-			tmp = elem;
-			elem = elem->next;
-			tmp->next = elem;
-			elem = *begin_list;
-		}
-		else
-			elem = elem->next;
+		begin_list
 	}
+	return (sens);
 }
 
-int main(int ac, char **av)
+void	ft_sorted_list_merge(t_list **begin_list1, t_list *begin_list2, int (*cmp)())
 {
-	
+	t_list *elem_insert;
+	t_list *elem;
+
+	elem_insert = begin_list2;
+	elem = *begin_list1;
+	while (elem_insert->next == NULL)
+	{
+		
+		
+		elem_insert = elem_insert->next;
+	}
+
 }
