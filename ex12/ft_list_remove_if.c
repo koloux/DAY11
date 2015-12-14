@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/10 05:59:23 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/10 06:17:32 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/14 15:35:39 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,15 @@ void	ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
 	t_list	*elem;
 
 	elem = *begin_list;
-	while (elem->next != NULL)
+	if (*begin_list)
 	{
 		if (cmp(elem->data, data_ref))
 		{
-			elem->next = elem->next->next;
+			*begin_list = (*begin_list)->next;
 			free(elem);
+			ft_list_remove_if(&(*begin_list), data_ref, cmp);
 		}
-		elem = elem->next;
+		else
+			ft_list_remove_if(&(*begin_list)->next, data_ref, cmp);
 	}
 }

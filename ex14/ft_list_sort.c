@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/10 06:22:55 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/13 12:36:14 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/13 10:52:50 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,9 @@ void	ft_list_sort(t_list **begin_list, int (*cmp)())
 		else
 			elem = elem->next;
 	}
+}
+
+int main(int ac, char **av)
+{
+	
 }

@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/05 08:44:18 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/13 12:27:44 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/13 16:41:17 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 typedef struct	s_list
 {
 	struct s_list	*next;
-	void			*data;
-}				t_list;
+	void		*data;
+}		t_list;
 
 t_list			*ft_create_elem(void *data);
 

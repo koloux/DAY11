@@ -6,16 +6,16 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/05 09:39:14 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/13 12:25:31 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/13 16:38:40 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
 
-int		ft_list_size(t_list *begin_list)
+int	ft_list_size(t_list *begin_list)
 {
 	t_list	*elem;
-	int		count;
+	int	count;
 
 	elem = begin_list;
 	if (elem == NULL)
