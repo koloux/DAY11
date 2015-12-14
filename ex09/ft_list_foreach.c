@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 17:16:40 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/14 14:46:21 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/14 17:45:02 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_list_foreach(t_list *begin_list, void (*f)(void *))
 {
-	while (begin_list)	
+	while (begin_list)
 	{
 		f(begin_list->data);
 		begin_list = begin_list->next;

@@ -6,22 +6,11 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/13 11:37:11 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/13 12:19:43 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/14 17:53:23 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
-
-int	ft_inc_dec(t_list *begin_list)
-{
-	int sens;
-
-	while (begin_list->next != NULL)
-	{
-		begin_list
-	}
-	return (sens);
-}
 
 void	ft_sorted_list_merge(t_list **begin_list1, t_list *begin_list2, int (*cmp)())
 {

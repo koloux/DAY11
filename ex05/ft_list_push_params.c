@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/05 10:58:16 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/14 12:11:17 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/14 17:44:29 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_list_push_front(t_list **begin_list, void *data)
 t_list	*ft_list_push_params(int ac, char **av)
 {
 	t_list	*begin;
-	int	i;
+	int		i;
 
 	if (ac == 0)
 		return (NULL);

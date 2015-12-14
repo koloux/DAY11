@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/05 14:04:32 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/14 15:33:03 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/14 17:48:29 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 unsigned int	ft_list_size(t_list *begin_list)
 {
-	t_list		*element;
+	t_list			*element;
 	unsigned int	nbr;
 
 	element = begin_list;
@@ -26,7 +26,7 @@ unsigned int	ft_list_size(t_list *begin_list)
 	return (nbr);
 }
 
-t_list		*ft_list_at(t_list *begin_list, unsigned int nbr)
+t_list			*ft_list_at(t_list *begin_list, unsigned int nbr)
 {
 	if (nbr == 0 || begin_list == NULL || nbr > ft_list_size(begin_list))
 		return (NULL);
