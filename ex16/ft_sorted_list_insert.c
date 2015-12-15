@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/10 07:16:52 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/10 07:51:51 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/15 12:53:54 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_sorted_list_insert(t_list **begin_list, void *data, int (*cmp)())
 {
-	t_list	elem;
-	t_list	new_elem;
+	t_list	*elem;
+	t_list	*new_elem;
 
 	elem = *begin_list;
 	if (cmp(elem->data, data) < 0)

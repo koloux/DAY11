@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/10 07:11:33 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/10 07:16:18 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/15 12:46:04 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,5 @@ void	ft_list_reverse_fun(t_list *begin_list)
 		new_root = root;
 		root = new_root;
 	}
+	begin_list = new_root;
 }

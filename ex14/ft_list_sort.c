@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/10 06:22:55 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/14 17:52:51 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/15 12:36:53 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	ft_list_sort(t_list **begin_list, int (*cmp)())
 	t_list	*prev_elem;
 
 	elem = *begin_list;
-	if (elem == NULL)
+	if (begin_list == NULL)
 		return (NULL);
-	while (elem->next != NULL)
+	while (elem->next)
 	{
 		if (cmp(elem->data, elem->next->data) > 0)
 		{
