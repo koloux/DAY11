@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/10 06:18:46 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/15 00:28:24 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/15 15:41:39 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_list_merge(t_list **begin_list1, t_list *begin_list2)
 {
-	t_list elem;
+	t_list *elem;
 
 	if (*begin_list1 == NULL)
 		*begin_list1 = begin_list2;

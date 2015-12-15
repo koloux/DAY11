@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/10 07:11:33 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/15 12:46:04 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/15 15:56:54 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ void	ft_list_reverse_fun(t_list *begin_list)
 	t_list	*root;
 	t_list	*next_root;
 
-	root = begin_list;
-	new_root = NULL;
-	while (root)
+	new_root = begin_list;
+	next_root = NULL;
+	while (new_root)
 	{
-		new_root = root->next;
-		root->next = new_root;
+		root = new_root->next;
+		new_root->next = next_root;
+		next_root = new_root;
 		new_root = root;
-		root = new_root;
 	}
-	begin_list = new_root;
+	begin_list = next_root;
 }
