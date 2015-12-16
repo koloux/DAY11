@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/05 10:58:16 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/15 14:47:20 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/16 09:16:54 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_list	*ft_list_push_params(int ac, char **av)
 		return (NULL);
 	list = ft_create_elem(av[--ac]);
 	begin = list;
-	while (ac --)
+	while (ac--)
 	{
 		list->next = ft_create_elem(av[ac]);
 		list = list->next;
