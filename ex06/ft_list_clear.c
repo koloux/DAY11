@@ -6,21 +6,21 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/05 13:49:21 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/15 14:54:50 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/16 10:40:50 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
 
-void	ft_clear(t_list *list)
-{
-	if (list->next != NULL)
-		ft_clear(list->next);
-	free(list);
-}
-
 void	ft_list_clear(t_list **begin_list)
 {
-	ft_clear(*begin_list);
+	t_list	*victim;
+
+	while (*begin_list)
+	{
+		victim = *begin_list;
+		*begin_list = (*begin_list)->next;
+		free(victim);
+	}
 	*begin_list = NULL;
 }

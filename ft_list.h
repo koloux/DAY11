@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_find.c                                     :+:      :+:    :+:   */
+/*   ft_list.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/09 18:23:19 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/16 11:14:29 by nhuber           ###   ########.fr       */
+/*   Created: 2015/11/05 08:44:18 by nhuber            #+#    #+#             */
+/*   Updated: 2015/11/05 10:31:13 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_list.h"
+#ifndef FT_LIST_H
+# define FT_LIST_H
+# include <stdlib.h>
 
-t_list	*ft_list_find(t_list *begin_list, void *data_ref, int (*cmp)())
+typedef struct	s_list
 {
-	t_list	*tmp;
+	struct s_list	*next;
+	void			*data;
+}				t_list;
 
-	tmp = begin_list;
-	while (tmp && cmp(tmp->data, data_ref))
-		tmp = tmp->next;
-	return (tmp);
-}
+#endif

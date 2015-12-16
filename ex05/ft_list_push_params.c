@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/05 10:58:16 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/16 09:16:54 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/16 11:48:19 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 t_list	*ft_list_push_params(int ac, char **av)
 {
 	t_list	*begin;
+	t_list	*list;
 
 	if (ac <= 0)
 		return (NULL);

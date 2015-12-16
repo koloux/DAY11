@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/05 14:04:32 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/15 15:08:58 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/16 10:59:52 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,19 @@
 
 t_list			*ft_list_at(t_list *begin_list, unsigned int nbr)
 {
-	t_list *tmp;
+	t_list		*tmp;
+	unsigned int	i;
 
-	if (!*begin_list || nbr <= 0)
+	if (begin_list == NULL)
 		return (NULL);
 	tmp = begin_list;
-	while (nbr > 1)
+	i = 0;
+	while (i < nbr)
 	{
 		if (!tmp->next)
 			return (NULL);
 		tmp = tmp->next;
-		nbr--;
+		i++;
 	}
 	return (tmp);
 }
